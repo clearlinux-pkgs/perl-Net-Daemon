@@ -4,12 +4,13 @@
 #
 Name     : perl-Net-Daemon
 Version  : 0.48
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/M/MN/MNOONING/Net-Daemon-0.48.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/M/MN/MNOONING/Net-Daemon-0.48.tar.gz
 Summary  : Perl extension for portable daemons
 Group    : Development/Tools
 License  : Artistic-1.0 GPL-1.0
+Requires: perl-Net-Daemon-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -31,8 +32,18 @@ Requires: perl-Net-Daemon = %{version}-%{release}
 dev components for the perl-Net-Daemon package.
 
 
+%package perl
+Summary: perl components for the perl-Net-Daemon package.
+Group: Default
+Requires: perl-Net-Daemon = %{version}-%{release}
+
+%description perl
+perl components for the perl-Net-Daemon package.
+
+
 %prep
 %setup -q -n Net-Daemon-0.48
+cd %{_builddir}/Net-Daemon-0.48
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -68,12 +79,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Net/Daemon.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/Daemon/Log.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/Daemon/Test.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Net::Daemon.3
 /usr/share/man/man3/Net::Daemon::Log.3
 /usr/share/man/man3/Net::Daemon::Test.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Net/Daemon.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/Daemon/Log.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/Daemon/Test.pm
