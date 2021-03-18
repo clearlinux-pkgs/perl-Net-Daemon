@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-Daemon
 Version  : 0.49
-Release  : 5
+Release  : 6
 URL      : https://cpan.metacpan.org/authors/id/T/TO/TODDR/Net-Daemon-0.49.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TO/TODDR/Net-Daemon-0.49.tar.gz
 Summary  : 'Perl extension for portable daemons'
@@ -88,6 +88,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/Net/Daemon.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Net/Daemon/Log.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Net/Daemon/Test.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/Daemon.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/Daemon/Log.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Net/Daemon/Test.pm
