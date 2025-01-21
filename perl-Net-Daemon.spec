@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-Daemon
 Version  : 0.49
-Release  : 16
+Release  : 17
 URL      : https://cpan.metacpan.org/authors/id/T/TO/TODDR/Net-Daemon-0.49.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TO/TODDR/Net-Daemon-0.49.tar.gz
 Summary  : 'Perl extension for portable daemons'
